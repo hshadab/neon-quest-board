@@ -22,14 +22,17 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          glow: "hsl(var(--secondary-glow))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+          glow: "hsl(var(--destructive-glow))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -38,6 +41,7 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          glow: "hsl(var(--accent-glow))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -46,6 +50,22 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          glass: "hsl(var(--card-glass))",
+          border: "hsl(var(--card-border))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          glow: "hsl(var(--success-glow))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          glow: "hsl(var(--warning-glow))",
+        },
+        neon: {
+          blue: "hsl(var(--neon-blue))",
+          purple: "hsl(var(--neon-purple))",
+          pink: "hsl(var(--neon-pink))",
+          green: "hsl(var(--neon-green))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -57,6 +77,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'gradient-neon': 'var(--gradient-neon)',
+        'gradient-accent': 'var(--gradient-accent)',
+        'gradient-success': 'var(--gradient-success)',
+      },
+      boxShadow: {
+        'neon': 'var(--shadow-neon)',
+        'purple': 'var(--shadow-purple)',
+        'glass': 'var(--shadow-glass)',
+        'glow-intense': 'var(--glow-intense)',
+        'glow-soft': 'var(--glow-soft)',
+      },
+      backdropBlur: {
+        'glass': '10px',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +115,50 @@ export default {
             height: "0",
           },
         },
+        "glow-pulse": {
+          "0%, 100%": {
+            boxShadow: "0 0 20px currentColor",
+          },
+          "50%": {
+            boxShadow: "0 0 40px currentColor",
+          },
+        },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
+        "slide-in": {
+          "0%": {
+            transform: "translateX(-100%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.95) translateY(10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1) translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "float": "float 6s ease-in-out infinite",
+        "slide-in": "slide-in 0.3s ease-out",
+        "fade-in": "fade-in 0.3s ease-out",
       },
     },
   },
